@@ -1,18 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import {HttpClientModule} from "@angular/common/http";
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
-import { WeatherservicesService } from './weatherservices.service';
-import { TodaycomponentComponent } from './today/todaycomponent/todaycomponent.component';
-import { TodayComponent } from './today/today/today.component';
-import { WeatherService } from './weather.service';
+import { FinderService } from './finder.service';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, TodaycomponentComponent, TodayComponent ],
+  imports:      [ BrowserModule, FormsModule,HttpClientModule,],
+  declarations: [ AppComponent, HelloComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [WeatherservicesService, WeatherService]
+  providers: [FinderService]
 })
 export class AppModule { }

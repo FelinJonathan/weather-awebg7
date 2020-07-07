@@ -1,20 +1,10 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { Component, Input } from '@angular/core';
 
-import {HttpClientModule} from '@angular/common/http';
-import {AppComponent} from './today/today.component';
-
-@NgModule({
-declarations:[
-  AppComponent,
-  TodayComponent
-],
-imports: [
-  BrowserModule,
-  HttpClientModule
-],
-providers:[],
-bootstrap:[AppComponent]
+@Component({
+  selector: 'hello',
+  template: `<h2>Hello {{name}}</h2>`,
+  styles: [`h2 { font-family: Lato; }`]
 })
-export class AppModule{ }
+export class HelloComponent  {
+  @Input() name: string;
+}
