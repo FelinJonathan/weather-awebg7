@@ -19,14 +19,15 @@ city;
   }
   getLocation()
   {
-    if("geolocation" in navigator){
-      navigator.geolocation.watchPosition((success)=>{
-        this.lat=success.coords.latitude;
-        this.lon=success.coords.longitude;
+    
+  if("geolocation" in navigator){
+  navigator.geolocation.watchPosition((success)=>{
+ this.lat=success.coords.latitude;
+   this.lon=success.coords.longitude;
         
-        this.weatherService.getWeatherDataByCoords(this.lat,this.lon).subscribe(data=>{
-          this.weather=data;
-        });
+ this.weatherService.getWeatherDataByCoords(this.lat,this.lon).subscribe(data=>{
+  this.weather=data;
+      });
       })
     }
   }
