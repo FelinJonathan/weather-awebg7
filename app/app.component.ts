@@ -1,5 +1,5 @@
 import { Component, VERSION, OnInit } from '@angular/core';
-import { FinderService } from './finder.service';
+import { FinderService } from './weather.service';
 
 @Component({
   selector: 'my-app',
